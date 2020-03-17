@@ -2,13 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {Store} from '@ngrx/store';
 import {IAppState} from '../../store/state/app.state';
 import {Router} from '@angular/router';
-import {GetUsers} from '../../store/actions/user.actions';
-import {select} from '@ngrx/core';
+import {GetUsers, UserActions} from '../../store/actions/user.actions';
 import {selectUserList} from '../../store/selectors/user.selectors';
-import {IConfig} from '../../modules/config.interface';
 import {Observable} from 'rxjs';
 import {IUser} from '../../modules/user.interface';
-import {selectConfig} from '../../store/selectors/config.selectors';
 
 @Component({
   selector: 'app-users',
@@ -17,14 +14,15 @@ import {selectConfig} from '../../store/selectors/config.selectors';
 })
 export class UsersComponent implements OnInit {
 
-  users$: Observable<IUser[]>; // this.store.pipe(select(selectUserList));
+  users$: Observable<IUser[]>;
 
   constructor(private store: Store<IAppState>,
+              private userActions: UserActions,
               private router: Router) { }
 
   ngOnInit(): void {
     this.users$ = this.store.select(selectUserList);
-    this.store.dispatch(new GetUsers());
+    this.userActions.getUsers();
   }
 
   navigateToUser(id: number) {

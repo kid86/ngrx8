@@ -1,5 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {IUser} from '../../modules/user.interface';
+import {UserActions} from '../../store/actions/user.actions';
+import {Store} from '@ngrx/store';
+import {IAppState} from '../../store/state/app.state';
 
 // @ts-ignore
 @Component({
@@ -12,12 +15,13 @@ export class UserListComponent implements OnInit {
   @Input() users: IUser[];
   @Output() userSelected: EventEmitter<number> = new EventEmitter();
 
-  constructor() { }
+  constructor(private userActions: UserActions) { }
 
   ngOnInit(): void {
   }
 
   navigateToUser(id: number) {
-    this.userSelected.emit(id);
+    this.userActions.getUser(id);
+    // this.userSelected.emit(id);
   }
 }

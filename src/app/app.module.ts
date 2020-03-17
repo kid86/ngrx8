@@ -18,6 +18,7 @@ import {ConfigEffects} from './store/effects/config.effects';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {ConfigService} from './services/config.service';
 import {UserService} from './services/user.service';
+import {AppActions} from './store/actions/app.actions';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {UserService} from './services/user.service';
   ],
   providers: [
     UserService,
-    ConfigService
+    ConfigService,
+    AppActions
   ],
   bootstrap: [AppComponent]
 })
