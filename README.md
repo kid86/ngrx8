@@ -29,9 +29,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Install
 
-npm install @ngrx/store --save
-yarn add @ngrx/store
-ng add @ngrx/store
+`npm install @ngrx/store --save`
+`yarn add @ngrx/store`
+`ng add @ngrx/store`
 
 or
 
