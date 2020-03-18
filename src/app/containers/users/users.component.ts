@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Store} from '@ngrx/store';
 import {IAppState} from '../../store/state/app.state';
 import {Router} from '@angular/router';
-import {GetUsers, UserActions} from '../../store/actions/user.actions';
+import {UserActions} from '../../store/actions/user.actions';
 import {selectUserList} from '../../store/selectors/user.selectors';
 import {Observable} from 'rxjs';
 import {IUser} from '../../modules/user.interface';

@@ -1,21 +1,15 @@
-import {initialUserState, IUserState} from '../state/user.state';
+import {IUserStateRecord, UserStateFactory} from '../state/user.state';
 import {EUserActions, UserActions} from '../actions/user.actions';
+import {ActionReducer} from '@ngrx/store';
 
-export const userReducers = (state = initialUserState, action: UserActions): IUserState => {
+export const userReducers: ActionReducer<IUserStateRecord> = (state: IUserStateRecord = UserStateFactory(), action: UserActions) => {
   switch (action.type) {
     case EUserActions.GetUsersSuccess: {
-      return {
-        ...state,
-        users: action.payload.users
-      };
+      return state.set('users', action.payload.users);
     }
 
     case EUserActions.GetUserSuccess: {
-      console.log(action);
-      return {
-        ...state,
-        selectedUser: action.payload
-      };
+      return state.set('selectedUser', action.payload.users);
     }
 
     default:

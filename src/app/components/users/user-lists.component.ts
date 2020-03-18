@@ -21,7 +21,7 @@ export class UserListComponent implements OnInit {
   }
 
   navigateToUser(id: number) {
-    this.userActions.getUser(id);
-    // this.userSelected.emit(id);
+    // this.userActions.getUser(id);
+    this.userSelected.emit(id);
   }
 }

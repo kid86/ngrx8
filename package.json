@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host pos.cloud.local --port 3001 --open --watch=true",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -24,9 +24,11 @@
     "@ngrx/router-store": "^8.6.0",
     "@ngrx/store": "^8.6.0",
     "@ngrx/store-devtools": "^8.6.0",
+    "immutable": "^4.0.0-rc.12",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.5.4",
     "tslib": "^1.10.0",
+    "typed-immutable-record": "0.0.6",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {

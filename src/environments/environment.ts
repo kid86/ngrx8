@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:4200/assets/data/'
+  apiUrl: 'http://pos.cloud.local:3001/assets/data/'
 };
 
 /*

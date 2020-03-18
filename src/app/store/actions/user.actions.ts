@@ -11,6 +11,9 @@ export enum EUserActions {
 }
 @Injectable()
 export class UserActions {
+  type: any;
+  payload: any;
+
   constructor(private store$: Store<IAppState>) {}
 
   getUsers(dispatch: boolean = true): Action {
