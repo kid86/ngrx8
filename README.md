@@ -1,6 +1,7 @@
 # Ngrx8
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+ng new angular-ngrx --style=scss
 
 ## Development server
 
@@ -25,3 +26,19 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Install
+
+npm install @ngrx/store --save
+yarn add @ngrx/store
+ng add @ngrx/store
+
+or
+
+npm install @ngrx/core @ngrx/store @ngrx/effects @ngrx/store-devtools @ngrx/router-store --save
+npm i rxjs-compat
+npm i immutable
+npm i typed-immutable-record (https://www.npmjs.com/package/typed-immutable-record)
+
+## Config
+Add `"skipLibCheck": true` file tsconfig.json
