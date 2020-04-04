@@ -41,7 +41,8 @@ npm i immutable \
 npm i typed-immutable-record (https://www.npmjs.com/package/typed-immutable-record) \
 npm i lodash \
 npm i font-awesome \
-npm i bootstrap
+npm i bootstrap \
+npm i jquery
 
 ## Config
 Add `"skipLibCheck": true` file tsconfig.json
