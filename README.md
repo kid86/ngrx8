@@ -29,16 +29,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Install
 
-`npm install @ngrx/store --save`
-`yarn add @ngrx/store`
-`ng add @ngrx/store`
+`npm install @ngrx/store --save` \
+`yarn add @ngrx/store` \
+`ng add @ngrx/store` \
 
 or
 
-npm install @ngrx/core @ngrx/store @ngrx/effects @ngrx/store-devtools @ngrx/router-store --save
-npm i rxjs-compat
-npm i immutable
-npm i typed-immutable-record (https://www.npmjs.com/package/typed-immutable-record)
+npm install @ngrx/core @ngrx/store @ngrx/effects @ngrx/store-devtools @ngrx/router-store --save \
+npm i rxjs-compat \ 
+npm i immutable \
+npm i typed-immutable-record (https://www.npmjs.com/package/typed-immutable-record) \
+npm i lodash \
+npm i font-awesome \
+npm i bootstrap \
 
 ## Config
 Add `"skipLibCheck": true` file tsconfig.json
